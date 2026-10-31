@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EDA Report - College Admission Chance Prediction</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:1100px;margin:30px auto;padding:0 20px;color:#262333;line-height:1.6;background:#faf9fc}
+header{background:#6b3fa0;color:white;padding:28px;border-radius:12px} h1,h2{color:#6b3fa0} header h1{color:white}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px} .card{background:white;padding:16px;border-radius:10px;box-shadow:0 2px 10px #0001}
+img{max-width:100%;border-radius:8px;background:white} section{background:white;margin:18px 0;padding:22px;border-radius:12px}
+table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:9px;text-align:left}th{background:#6b3fa0;color:white}
+.note{background:#fff4dc;padding:14px;border-left:4px solid #d89a28}
+</style></head><body>
+<header><h1>College Admission Chance Prediction</h1><p>Exploratory Data Analysis and Model Evaluation</p>
+<p><b>Project Members:</b> Hetvi Rajodiya (504) | Khushi Patel (505)</p></header>
+<section><h2>1. Dataset Overview</h2><div class="cards">
+<div class="card"><b>Records</b><h2>2,500</h2></div><div class="card"><b>Fields</b><h2>10</h2></div>
+<div class="card"><b>Missing values</b><h2>0</h2></div><div class="card"><b>Duplicate rows</b><h2>0</h2></div></div>
+<p>The dataset is synthetic and created for educational demonstration. The target field, <code>Admission_Chance</code>, is a continuous score from 0 to 1.</p>
+<table><tr><th>Field</th><th>Description</th></tr><tr><td>GRE_Score</td><td>GRE score (260–340)</td></tr><tr><td>TOEFL_Score</td><td>TOEFL score (75–120)</td></tr><tr><td>University_Rating</td><td>University rating on a 1–5 scale</td></tr><tr><td>SOP_Rating</td><td>Statement of Purpose rating on a 1–5 scale</td></tr><tr><td>LOR_Rating</td><td>Letter of Recommendation rating on a 1–5 scale</td></tr><tr><td>CGPA</td><td>Academic grade point average (5.50–10.00)</td></tr><tr><td>Research</td><td>Research experience indicator (0 = No, 1 = Yes)</td></tr><tr><td>Work_Experience</td><td>Years of work experience (0–5)</td></tr><tr><td>Internship_Count</td><td>Number of internships (0–4)</td></tr><tr><td>Admission_Chance</td><td>Target score between 0.05 and 0.99</td></tr></table></section>
+<section><h2>2. Admission Chance Distribution</h2><img src="../Images of model/admission_chance_distribution.png"><p>Shows the frequency of admission-chance scores across all records.</p></section>
+<section><h2>3. CGPA and GRE Analysis</h2><img src="../Images of model/cgpa_vs_admission_chance.png"><img src="../Images of model/gre_score_distribution.png"></section>
+<section><h2>4. Research and Correlation Analysis</h2><img src="../Images of model/research_vs_admission_chance.png"><img src="../Images of model/correlation_heatmap.png"></section>
+<section><h2>5. Regression Model Comparison</h2><table><tr><th>Model</th><th>MAE</th><th>RMSE</th><th>R²</th></tr><tr><td>Linear Regression</td><td>0.0431</td><td>0.0535</td><td>0.7724</td></tr><tr><td>Random Forest</td><td>0.0486</td><td>0.0604</td><td>0.7098</td></tr><tr><td>Gradient Boosting</td><td>0.0466</td><td>0.0581</td><td>0.7313</td></tr></table>
+<p>Selected model: <b>Linear Regression</b> (lowest RMSE on the held-out test split).</p><img src="../Images of model/model_error_comparison.png"><img src="../Images of model/model_r2_comparison.png"><img src="../Images of model/actual_vs_predicted.png"><img src="../Images of model/feature_influence.png"></section>
+<section><h2>6. Interpretation and Limitations</h2><p>MAE and RMSE measure prediction error; lower values are better. R-squared measures explained variation; higher values are generally better. Feature coefficients show associations within this fitted model and do not establish causation.</p>
+<div class="note"><b>Important:</b> This project uses a synthetic academic dataset. The predictions are illustrative only, not official admission probabilities, guarantees, or a substitute for institution-specific admission criteria.</div></section>
+</body></html>
