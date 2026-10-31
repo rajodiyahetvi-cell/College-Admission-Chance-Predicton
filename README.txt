@@ -32,3 +32,4 @@ The script reads the CSV using a relative project path and saves graphs and trai
 
 Important limitation
 The data is synthetic and the model output is a classroom demonstration only. It is not a real or calibrated probability of admission to any college.
+College Admission Chance Prediction Project
